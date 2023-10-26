@@ -1,0 +1,165 @@
+.header {
+    box-shadow: 0px 0px 30px 0px #00000033;
+    background: #1A191B;
+    position: absolute;
+    width: 100%;
+    position: relative;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    margin-right: 15px;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+}
+
+.header__menu {
+    margin-right: 45px;
+}
+
+.menu {}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item {
+    padding: 40px 17.5px;
+
+    &:hover {
+        background: #FFFFFF4D;
+        text-align: center;
+    }
+}
+
+.menu__item {
+    text-align: center;
+}
+
+.menu__link {
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.header__contacts {
+    display: flex;
+}
+
+.contacts {}
+
+.contacts__list {
+    display: flex;
+    margin-right: 37px;
+    align-items: center;
+}
+
+.contacts__ilem:not(:last-child) {
+    margin-right: 20px;
+}
+
+.contacts__link {}
+
+.contacts__button {
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 1.46px solid #FFFFFF;
+    padding: 0;
+    width: 233px;
+    padding: 17px 0;
+    display: block;
+    text-align: center;
+    border-radius: 7.28px;
+    box-shadow: 0px 0px 29.125001907348633px 0px #0000004D;
+
+}
+
+.icon-menu {
+    display: none;
+}
+
+.icon-cross {
+    display: none;
+}
+
+@media(max-width:1102px) {
+    .icon-menu {
+        display: block;
+        margin-left: 20px;
+    }
+
+    .header__menu {
+        display: none;
+        position: absolute;
+        margin-right: 0px;
+        width: 100%;
+        left: 0;
+        top: 100px;
+        background-color: #151515;
+        height: 100vh;
+    }
+
+    .menu__list {
+        display: block;
+    }
+
+
+
+    .contacts__button {
+        margin: 24px 0;
+    }
+}
+
+@media(max-width:761px) {
+    .header__menu {
+        display: none;
+        position: relative;
+        height: 0;
+    }
+
+    .header__contacts {
+        display: static;
+        justify-content: center;
+    }
+
+    .header__content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        height: 100vh;
+        left: 0;
+        top: 78px;
+        background-color: #151515;
+        width: 100%;
+
+    }
+
+    @media(max-width:395px) {
+
+        .header__contacts {
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .contacts__list {
+            margin-right: 0px;
+        }
+    }
+
+    .header__container {
+        padding: 24px 15px;
+    }
+}
