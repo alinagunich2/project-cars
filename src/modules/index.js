@@ -1,4 +1,28 @@
 
+let options={
+    root: null,
+    rootMargin:'5px',
+    threshold:0.5
+}
+let callback=function(entries,observer){
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            console.log(entry)
+            entry.target.classList.add('_element-show')
+        }else{
+            entry.target.classList.remove('_element-show')
+        }
+    })
+}
+
+let observer = new IntersectionObserver(callback,options)
+let targets = document.querySelectorAll('._element-animation')
+targets.forEach(target=>{
+    observer.observe(target)
+})
+
+
+
 let headerMenu = document.getElementById('header-menu')
 let headerContent = document.getElementById('header-content')
 
@@ -123,6 +147,7 @@ if(window.innerWidth<=700){
 }else{
     itemCard[0].style.display = 'flex'
     itemCard[1].style.display = 'flex'
+    for(let i=2;i<itemCard.length;i++){itemCard[i].style.display = 'none'}
     
     let indexItemCard= 0
     

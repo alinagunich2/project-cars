@@ -116,3 +116,11 @@ body {
   margin: 0 auto;
   box-sizing: content-box;
 }
+
+._element-animation{
+  opacity: 0.2;
+  transition: opacity 1s;
+}
+._element-animation._element-show{
+  opacity: 1;
+}
